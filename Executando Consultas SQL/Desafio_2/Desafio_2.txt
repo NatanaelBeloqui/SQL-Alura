@@ -1,0 +1,37 @@
+Desafio 2
+
+------ 1 ------
+Retornar a média de Notas dos Alunos em história.
+
+SELECT ROUND(AVG(nota), 2) AS media_notas
+FROM Notas
+WHERE id_disciplina = 2;
+
+------ 2 ------
+Retornar as informações dos alunos cujo Nome começa com 'A'.
+
+SELECT * FROM Alunos
+WHERE nome_aluno like 'A%';
+
+------ 3 ------
+Buscar apenas os alunos que fazem aniversário em fevereiro.
+
+SELECT * from Alunos
+WHERE STRFTIME('%m', data_nascimento) = '02';
+
+------ 4 ------
+Retornar se o aluno está ou não aprovado. Aluno é considerado aprovado se a sua nota foi igual ou maior que 6.
+
+SELECT 
+    nome_aluno, 
+    CAST((JULIANDAY('now') - JULIANDAY(data_nascimento)) / 365.25 AS INTEGER) AS idade_aluno
+FROM Alunos;
+
+------ 5 ------
+Retornar se o aluno está ou não aprovado. Aluno é considerado aprovado se a sua nota foi igual ou maior que 6.
+
+SELECT id_aluno, nota, CaSE
+WHEN nota < 6 then 'Reprovado'
+else 'Aprovado'
+end as aprovacao
+from Notas;

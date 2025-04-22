@@ -1,0 +1,1 @@
+SELECT mes, MIN(faturamento_bruto) FROM faturamento;

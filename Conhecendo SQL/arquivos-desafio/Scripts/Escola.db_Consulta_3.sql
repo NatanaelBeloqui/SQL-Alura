@@ -1,0 +1,1 @@
+SELECT * FROM Disciplinas WHERE carga_horaria_disciplina > 40;

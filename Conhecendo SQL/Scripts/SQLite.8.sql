@@ -1,0 +1,1 @@
+SELECT * FROM tabelapedidos where data_do_pedido > '2023-09-19';

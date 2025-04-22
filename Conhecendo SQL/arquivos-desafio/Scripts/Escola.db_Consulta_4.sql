@@ -1,0 +1,1 @@
+SELECT * FROM Notas WHERE valor_da_nota BETWEEN 6 and 8;

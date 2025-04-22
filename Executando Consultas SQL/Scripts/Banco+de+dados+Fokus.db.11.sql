@@ -1,0 +1,1 @@
+SELECT AVG(despesas) from faturamento;
