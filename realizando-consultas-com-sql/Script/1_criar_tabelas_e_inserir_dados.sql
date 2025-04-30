@@ -1,3 +1,8 @@
+CREATE TABLE faturamento_diario (
+    dia DATE,
+    faturamento_total DECIMAL(10, 2)
+);
+
 CREATE TABLE produtos (
   id TEXT PRIMARY KEY,
   nome VARCHAR(255),
