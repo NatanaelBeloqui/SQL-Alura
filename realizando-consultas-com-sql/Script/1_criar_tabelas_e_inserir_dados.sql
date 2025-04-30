@@ -65,8 +65,20 @@ CREATE TABLE itens_pedidos (
   FOREIGN KEY (id_produto) REFERENCES produtos(id) ON DELETE CASCADE
 );
 
-
-
+-- Criação da TRIGGER
+CREATE TRIGGER calcula_faturamento_diario
+AFTER INSERT on itens_pedidos
+for each ROW
+BEGIN
+DELETE FROM faturamento_diario;
+INSERT into faturamento_diario (dia, faturamento_total)
+SELECT DATE(data_hora_pedido) as dia, SUM(ip.preco_unitario) as faturamento_diario
+FROM pedidos as p
+JOIN itens_pedidos as ip
+on p.id = ip.id_pedido
+GROUP by dia
+ORDER by dia;
+END;
 
 
 -- Inserção de colaboradores
