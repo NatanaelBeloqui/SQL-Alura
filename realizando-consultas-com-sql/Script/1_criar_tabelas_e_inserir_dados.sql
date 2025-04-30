@@ -1330,3 +1330,10 @@ INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, preco_unitario) VA
 (451, 13, 1, 7.0),
 (452, 10, 1, 5.0),
 (452, 31, 1, 12.50);
+
+-- Atualizações dos dados
+
+UPDATE produtos
+set preco = 13.0
+WHERE id = 31;
+
