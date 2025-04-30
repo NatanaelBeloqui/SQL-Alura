@@ -603,8 +603,8 @@ INSERT INTO pedidos (id, id_cliente, data_hora_pedido, status) VALUES
 (447, 4, '2023-04-03 08:30:00', 'Concluído'),
 (448, 22, '2023-04-03 09:00:00', 'Entregue'),
 (449, 18, '2023-04-03 09:30:00', 'Em Andamento'),
-(450, 23, '2023-04-03 10:00:00', 'Concluído');
-
+(450, 23, '2023-04-03 10:00:00', 'Concluído'),
+(451, 27, '2023-10-07 14:30:00', 'Em Andamento');
 INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, preco_unitario) VALUES
 (1, 5, 1, 2.00),
 (1, 2, 2, 7.00),
