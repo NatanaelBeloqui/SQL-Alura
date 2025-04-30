@@ -1337,3 +1337,6 @@ UPDATE produtos
 set preco = 13.0
 WHERE id = 31;
 
+UPDATE produtos
+set descricao = 'Croissant recheado com amêndoas.'
+WHERE id = 28;
