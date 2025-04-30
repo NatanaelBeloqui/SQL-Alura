@@ -604,7 +604,8 @@ INSERT INTO pedidos (id, id_cliente, data_hora_pedido, status) VALUES
 (448, 22, '2023-04-03 09:00:00', 'Entregue'),
 (449, 18, '2023-04-03 09:30:00', 'Em Andamento'),
 (450, 23, '2023-04-03 10:00:00', 'Concluído'),
-(451, 27, '2023-10-07 14:30:00', 'Em Andamento');
+(451, 27, '2023-10-07 14:30:00', 'Em Andamento'),
+(452, 28, '2023-10-07 14:35:00', 'Em Andamento');
 INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, preco_unitario) VALUES
 (1, 5, 1, 2.00),
 (1, 2, 2, 7.00),
@@ -1301,4 +1302,6 @@ INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, preco_unitario) VA
 (449, 30, 2, 16.00),
 (450, 11, 1, 3.50),
 (451, 14, 1, 6.0),
-(451, 13, 1, 7.0);
+(451, 13, 1, 7.0),
+(452, 10, 1, 5.0),
+(452, 31, 1, 12.50),
