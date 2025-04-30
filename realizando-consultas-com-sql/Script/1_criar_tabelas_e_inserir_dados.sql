@@ -1299,4 +1299,6 @@ INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, preco_unitario) VA
 (448, 13, 3, 21.00),
 (449, 5, 3, 6.00),
 (449, 30, 2, 16.00),
-(450, 11, 1, 3.50);
+(450, 11, 1, 3.50),
+(451, 14, 1, 6.0),
+(451, 13, 1, 7.0);
