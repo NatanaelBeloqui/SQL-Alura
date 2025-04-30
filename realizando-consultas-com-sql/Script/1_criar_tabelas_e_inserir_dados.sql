@@ -114,7 +114,8 @@ INSERT INTO produtos (id, nome, descricao, preco, categoria) VALUES
 ('27', 'Batido de Morango', 'Batido cremoso de morango com chantilly.', 4.50, 'Bebidas'),
 ('28', 'Croissant de Amêndoa', 'Croissant recheado com chocolate belga.', 3.50, 'Sobremesa'),
 ('29', 'Tofu Scramble', 'Scramble de tofu com vegetais e espinafre.', 6.50, 'Sobremesa'),
-('30', 'Salada de Atum', 'Salada de atum com feijão e pimentão.', 8.00, 'Almoço');
+('30', 'Salada de Atum', 'Salada de atum com feijão e pimentão.', 8.00, 'Almoço'),
+(31, 'Lasanha à Bolonhesa', 'Deliciosa lasanha caseira com molho bolonhesa', 12.50, 'Almoço');
 
 -- Inserção de clientes
 INSERT INTO clientes (id, nome, telefone, email, endereco) VALUES
@@ -143,7 +144,9 @@ INSERT INTO clientes (id, nome, telefone, email, endereco) VALUES
 ('24', 'Rui Santos', '1215554321', 'Sem email', 'Alameda das Estrelas, 654, Cidade L'),
 ('25', 'Diogo Fernandes', '2615555678', 'diogo.fernandes@email.com', 'Praça dos Desejos, 987, Cidade Z'),
 ('26', 'Helena Lima', '1315551234', 'Sem email', 'Avenida dos Sonhos, 234, Cidade M'),
-('27', 'Paulo Sousa', '1415555678', 'Sem email', 'Travessa das Marés, 876, Cidade N');
+('27', 'Paulo Sousa', '1415555678', 'Sem email', 'Travessa das Marés, 876, Cidade N'),
+(28, 'João Santos', '215555678', 'joao.santos@email.com', 'Avenida Principal, 456, Cidade B'),
+(29, 'Carla Ferreira', '315557890', 'carla.ferreira@email.com', 'Travessa das Ruas, 789, Cidade C');
 
 INSERT INTO pedidos (id, id_cliente, data_hora_pedido, status) VALUES
  (1, 10, '2023-01-02 08:15:00', 'Em Andamento'),
