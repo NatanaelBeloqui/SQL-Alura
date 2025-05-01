@@ -1340,3 +1340,6 @@ WHERE id = 31;
 UPDATE produtos
 set descricao = 'Croissant recheado com amêndoas.'
 WHERE id = 28;
+
+DELETE FROM clientes
+WHERE id = 27;
