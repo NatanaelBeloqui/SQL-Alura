@@ -6,16 +6,12 @@ WHERE nome = 'Maria Silva';
 
 -- Exercício 02
 
-SELECT * FROM pedidos;
-
 SELECT id as id_pedido, id_cliente
 FROM pedidos
 WHERE status = 'Entregue'
 ORDER by id_cliente;
 
 -- Exercício 03
-
-SELECT * FROM produtos;
 
 SELECT *
 FROM produtos
@@ -24,8 +20,6 @@ AND preco < 15;
 
 -- Exercício 04
 
-SELECT * FROM colaboradores;
-
 SELECT nome, cargo
 FROM colaboradores
 WHERE data_contratacao
@@ -33,8 +27,6 @@ BETWEEN '2022-01-01'
 AND '2022-06-31';
 
 -- Exercício 05
-
-SELECT * FROM clientes;
 
 SELECT *
 FROM pedidos
@@ -51,5 +43,18 @@ WHERE data_hora_pedido = (
 
 -- Exercício 06
 
+SELECT nome
+FROM produtos
+WHERE id not IN (
+  SELECT id_produto
+  FROM itens_pedidos
+);
+
+-- Exercício 07
+
+SELECT * FROM clientes;
+
 SELECT * FROM pedidos;
-SELECT * FROM itens_pedidos;
+
+SELECT nome
+FROM clientes
