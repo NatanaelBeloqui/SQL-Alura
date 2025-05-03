@@ -52,9 +52,41 @@ WHERE id not IN (
 
 -- Exercício 07
 
-SELECT * FROM clientes;
+SELECT DISTINCT c.nome
+FROM clientes as c
+JOIN pedidos as p
+on c.id = p.id_cliente
+WHERE data_hora_pedido
+BETWEEN '2023-01-01'
+AND '2023-12-31'
+ORDER by c.nome;
 
-SELECT * FROM pedidos;
+-- Exercício 08
 
-SELECT nome
-FROM clientes
+SELECT p.nome
+FROM produtos as p
+JOIN itens_pedidos as ip
+on p.id = ip.id_produto
+GROUP by ip.id_produto
+HAVING SUM(ip.quantidade) < 15
+ORDER BY CAST(ip.id_produto AS UNSIGNED);
+
+-- Exercício 09
+
+SELECT pr.nome AS produto, pe.id AS pedido_id
+FROM clientes AS c
+JOIN pedidos AS pe ON c.id = pe.id_cliente
+JOIN itens_pedidos AS ip ON pe.id = ip.id_pedido
+JOIN produtos AS pr ON ip.id_produto = pr.id
+WHERE c.nome IN ('Pedro Alves', 'Ana Rodrigues')
+ORDER BY CAST(pe.id AS UNSIGNED);
+
+-- Exercício 10
+
+SELECT p.id_cliente, c.nome, SUM(ip.quantidade * ip.preco_unitario) as valor_total
+FROM clientes as c
+JOIN pedidos as p on c.id = p.id_cliente
+JOIN itens_pedidos as ip on p.id = ip.id_pedido
+GROUP BY p.id_cliente
+ORDER by valor_total DESC
+LIMIT 1;
